@@ -20,7 +20,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to start the server %v", err)
 	}
-
 	grpcServer := grpc.NewServer()
 	pb.RegisterGreetServiceServer(grpcServer, &helloServer{})
 
